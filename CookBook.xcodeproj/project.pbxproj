@@ -16,6 +16,7 @@
 		5AE1DEE82935080D00665540 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE1DEE62935080D00665540 /* APIKey.swift */; };
 		5AE1DEEF293510DA00665540 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE1DEEE293510DA00665540 /* NetworkClient.swift */; };
 		5AE1DEF129351C6E00665540 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE1DEF029351C6E00665540 /* OnboardingViewController.swift */; };
+		5AE1DEF3293525AD00665540 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE1DEF2293525AD00665540 /* UIViewController+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5AE1DEE62935080D00665540 /* APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		5AE1DEEE293510DA00665540 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		5AE1DEF029351C6E00665540 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		5AE1DEF2293525AD00665540 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		5AE1DEED29350A6000665540 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				5AE1DEF2293525AD00665540 /* UIViewController+Utils.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AE1DEF3293525AD00665540 /* UIViewController+Utils.swift in Sources */,
 				5AE1DED42934F6D200665540 /* ViewController.swift in Sources */,
 				5AE1DEE72935080D00665540 /* Theme.swift in Sources */,
 				5AE1DED02934F6D200665540 /* AppDelegate.swift in Sources */,

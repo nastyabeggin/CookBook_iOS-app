@@ -11,6 +11,7 @@ enum Theme {
     // MARK: - Fonts
     
     // MARK: - Colors
+    static let appColor: UIColor = .systemTeal
     
     // MARK: - Style
     static let buttonCornerRadius: CGFloat = 15
