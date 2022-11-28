@@ -24,7 +24,7 @@ CHALLENGE №2 “СookBook” by SWIFT MARATHON 5.0
 ...
 
 ## Resources
-* [Maraphone chalange](https://github.com/skifih4x/WhoWantToBeMillionaireChallenge)
+...
 
 ## Requirements
 * iOS 14.0+
