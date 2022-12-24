@@ -5,7 +5,7 @@
 //  Created by SERGEY SHLYAKHIN on 16.11.2022.
 //
 
-import Foundation
+import UIKit
 
 enum ServiceError: Error {
     case network(statusCode: Int)
@@ -13,9 +13,13 @@ enum ServiceError: Error {
     case general(reason: String)
 }
 
-struct NetworkClient {
+class NetworkClient {
+    
+    var pagination = false
     
     func fetch(url: URL, handler: @escaping (Result<Data, Error>) -> Void) {
+        pagination = true
+        
         let request = URLRequest(url: url)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -32,6 +36,7 @@ struct NetworkClient {
             
             guard let data = data else { return }
             handler(.success(data))
+            self.pagination = false
         }
         
         task.resume()

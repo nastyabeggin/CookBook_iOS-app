@@ -23,7 +23,7 @@ extension MainViewController {
 
         popularVC.setTabBarImage(imageName: "star.fill", title: "popular")
         favoriteVC.setTabBarImage(imageName: "heart.fill", title: "favorite")
-        searchVC.setTabBarImage(imageName: "magnifyingglass", title: "search")
+        searchVC.setTabBarImage(imageName: "magnifyingglass", title: "discover")
 
         let popularNC = UINavigationController(rootViewController: popularVC)
         let favoriteNC = UINavigationController(rootViewController: favoriteVC)
@@ -35,64 +35,9 @@ extension MainViewController {
     }
 
     private func setupTabBar() {
-        tabBar.tintColor = Theme.appColor
+        tabBar.clipsToBounds = true
+        tabBar.tintColor = Theme.cbGreen50
+        tabBar.unselectedItemTintColor = Theme.cbYellow50
         tabBar.isTranslucent = false
-    }
-}
-
-// TODO: - далее разделить на файлы
-final class PopularViewController: UIViewController {
-    private let startButton = UIButton(type: .system)
-    
-    override func viewDidLoad() {
-        view.backgroundColor = .systemRed
-        startButton.setTitle("Recipe", for: [])
-        startButton.addTarget(self, action: #selector(startButtonTapped), for: .primaryActionTriggered)
-        
-        startButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(startButton)
-        NSLayoutConstraint.activate([
-            startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            startButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
-    }
-    
-    @objc func startButtonTapped(_ sender: UIButton) {
-        let vc = DetailViewController()
-        navigationController?.pushViewController(vc, animated: true)
-    }
-}
-
-final class FavoriteViewController: UIViewController {
-    private let startButton = UIButton(type: .system)
-    
-    override func viewDidLoad() {
-        view.backgroundColor = .systemOrange
-        startButton.setTitle("Recipe", for: [])
-        startButton.addTarget(self, action: #selector(startButtonTapped), for: .primaryActionTriggered)
-        
-        startButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(startButton)
-        NSLayoutConstraint.activate([
-            startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            startButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
-    }
-    
-    @objc func startButtonTapped(_ sender: UIButton) {
-        let vc = DetailViewController()
-        navigationController?.pushViewController(vc, animated: true)
-    }
-}
-
-final class SearchViewController: UIViewController {
-    override func viewDidLoad() {
-        view.backgroundColor = .systemPurple
-    }
-}
-
-final class DetailViewController: UIViewController {
-    override func viewDidLoad() {
-        view.backgroundColor = .systemGreen
     }
 }
