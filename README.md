@@ -51,7 +51,7 @@ CHALLENGE №2 “СookBook” by SWIFT MARATHON 5.0
 * POP
 * URLSession
 
-## My tasks
+## Description
 * Building UI programmatically
 * Using UITableView with UIDiffableDataSource
 * Passing data between ViewControllers
